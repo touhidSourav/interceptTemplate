@@ -74,17 +74,19 @@ function InterceptSignUpPage() {
 
   return (
     <Modal>
-      <Box className='md:min-h-screen flex items-center justify-center w-80 md:w-auto '>
+      <Box className='md:min-h-screen flex items-center justify-center w-80 sm:w- md:w-[650px] lg:w-auto '>
         <Flex
-          gap={20}
-          direction={{ base: 'column', sm: 'row' }}
           justify='center'
           className='bg-white m-auto min-h-[500px] w-full md:w-4/5 lg:w-full rounded-md shadow-lg'
         >
-          <Box className='bg-teal-500 w-full md:w-[40%] rounded-tr-md  md:rounded-tr-none rounded-tl-md md:rounded-bl-md flex justify-center items-center text-white py-2 md:py-0'>
+          <Box className='bg-teal-500 w-full md:w-[40%] rounded-tl-md rounded-bl-md hidden md:flex justify-center items-center text-white py-2 md:py-0'>
             <Stack align='center' gap={isMobile ? 5 : 15}>
-              <Title size={isMobile ? 'h2' : 'h1'}>Hello there</Title>
-              <Text>Enter your personal details</Text>
+              <Text className='text-3xl lg:text-4xl font-semibold'>
+                Hello there
+              </Text>
+              <Text className='text-sm lg:text-md'>
+                Enter your personal details
+              </Text>
               <Link
                 href='/user/signIn'
                 className='border border-white text-sm hover:scale-105 w-1/2 py-2 text-center rounded-full
@@ -94,7 +96,7 @@ function InterceptSignUpPage() {
               </Link>
             </Stack>
           </Box>
-          <Box className='w-full md:w-[60%] flex'>
+          <Box className='w-full md:w-[60%] flex py-2'>
             <Stack
               w={isMobile ? '90%' : '70%'}
               gap={isMobile ? 5 : 15}

@@ -75,13 +75,12 @@ function SignUpPage() {
     <Box className='md:min-h-screen flex items-center justify-center'>
       <Flex
         gap={20}
-        direction={{ base: 'column', sm: 'row' }}
         justify='center'
         className='bg-white m-auto min-h-[500px] w-full md:w-4/5 lg:w-full rounded-md shadow-lg'
       >
-        <Box className='bg-teal-500 w-full md:w-[40%] rounded-tr-md  md:rounded-tr-none rounded-tl-md md:rounded-bl-md flex justify-center items-center text-white py-2 md:py-0'>
+        <Box className='bg-teal-500 w-full md:w-[40%] rounded-tr-md  md:rounded-tr-none rounded-tl-md md:rounded-bl-md hidden sm:flex justify-center items-center text-white py-2 md:py-0'>
           <Stack align='center' gap={isMobile ? 5 : 15}>
-            <Title size={isMobile ? 'h2' : 'h1'}>Hello there</Title>
+            <Title>Hello there</Title>
             <Text>Enter your personal details</Text>
             <Link
               href='/user/signIn'
